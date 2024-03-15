@@ -1,0 +1,1452 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background: url(./imgs/body.png);
+    background-position: center;
+    background-size: cover;
+}
+html{
+    scroll-behavior: smooth;
+}
+button{
+    cursor: pointer;
+}
+
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.pre-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.pre-navbar input{
+    width: 16rem;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: .5rem 0;
+    flex-basis: 20rem;
+    background: transparent;
+}
+.pre-navbar input:focus{
+    outline: none;
+}
+.pre-navbar .icons a{
+    margin-right: 1.5rem;
+}
+.pre-navbar .logo{
+    margin-right: 4rem;
+}
+.pre-navbar .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pre-navbar .icons p{
+    border-bottom: 1px solid black;
+    margin: 0 .5rem;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.2rem;
+}
+.navbar ul li a{
+    font-size: 1.2rem;
+    color: black;
+  padding-bottom: .5rem;
+}
+.navbar ul li a:hover{
+    border-bottom: 1px solid black;
+}
+.navbar button{
+    color: black;
+    background: transparent;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+.menu{
+    display: none;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 1rem auto;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 40px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+.benefits{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 20rem;
+}
+.cats .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+.cats .types{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+.cats .types img{
+    border-radius: 8px;
+}
+footer{
+    background-color: black;
+    padding: 5rem;
+    margin-top: 2rem;
+}
+footer .footer-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+    width: 50%;
+}
+.footer-top form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.footer-top input{
+    border: none;
+    background: transparent;
+    width: 100%;
+    color: white;
+    caret-color: white;
+}
+.footer-top input::placeholder{
+    font-size: 1.2rem;
+}
+.footer-top input:focus{
+    outline: none;
+}
+.footer-top button{
+    background-color: transparent;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+}
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6rem;
+}
+.footer-bottom h2,.footer-bottom h5,.footer-bottom a{
+    color: white;
+}
+.footer-bottom h2{
+    margin-top: 1rem;
+}
+.footer-bottom h5{
+    font-weight: 100;
+    font-size: .7rem;
+    gap: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    width: 11rem;
+}
+.footer-bottom h5 img{
+    margin-right: .5rem;
+}
+.footer-bottom ul li{
+    margin-bottom: .5rem;
+}
+.footer-bottom .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-bottom ul li a:hover{
+    color: rgba(242, 215, 128, 1);
+}
+
+
+
+
+
+
+
+
+#app{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: -2rem;
+   margin-top: 2.5rem;
+}
+#app .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-top: 1px solid black;
+    height: 95vh;
+    align-items: center;
+    flex-basis: 50%;
+    padding-top: 1rem;
+}
+#app .container p{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+
+}
+#app .container p a{
+    color: black;
+    border-bottom: 2px solid black;
+    font-weight: bolder;
+}
+#app .links{
+    display: flex;
+}
+#app .right{
+    background: url(./imgs/register.png);
+    background-position: center;
+    background-size: cover;
+    flex-basis: 50%;
+    height: 97.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2.5rem;
+}
+#app .right p{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 3rem;
+    font-weight: bolder;
+}
+
+#app .auth-links{
+    display: flex;
+    flex-direction: column;
+}
+.containe .inpt input{
+    width: 25rem;
+    height: 2rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+    border: 1px solid black;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+.containe .inpt input:focus{
+    outline: 2px solid rgba(242, 215, 128, 1);
+    border: none;
+}
+.containe .inpt label{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.containe .card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.containe .confirm{
+    width: 27.5rem;
+    height: 3.5rem;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.containe .card{
+    border: 2px solid black;
+    padding: 1rem;
+    width: 35rem;
+    margin-top: -.5rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.containe .forgot{
+    margin-top: 20rem;
+    font-size: 1rem;
+}
+.containe .forgot-up{
+    margin: 1rem 0;
+}
+
+
+
+
+
+
+
+
+
+.admin-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.admin-login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.admin-login h1{
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+.admin-login input{
+    width: 25rem;
+    height: 3rem;
+    border: 1px solid black;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+.admin-login input:focus{
+    outline: none;
+}
+.admin-login input::placeholder{
+    font-size: 1.2rem;
+}
+.admin-login .confirm{
+    background-color: black;
+    border: 1px solid black;
+    color: white;
+    width: 27rem;
+    height: 3rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dash-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+    width: 90%;
+}
+.dash-nav h1{
+    font-size: 1.2rem;
+}
+.dash-nav button{
+    background: transparent;
+    font-size: 1.2rem;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+.dash-nav a{
+    font-size: 1.2rem;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+
+
+.ajouter-parfum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.ajouter-parfum form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.ajouter-parfum h1{
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+.ajouter-parfum .inpt{
+    width: 70%;
+    height: 3rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+}
+.ajouter-parfum .form-group{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ajouter-parfum textarea{
+    width: 70%;
+    height: 6rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+}
+.ajouter-parfum .confirm{
+    background-color: black;
+    border: 1px solid black;
+    width: 70%;
+    height: 3rem;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.ajouter-parfum input::placeholder{
+    font-size: 1.2rem;
+}
+.ajouter-parfum label{
+    font-size: 1.2rem;
+}
+.ajouter-parfum .check{
+    width: 10rem;
+}
+
+
+
+
+
+.luxes{
+    border-top: 2px solid black;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+.luxes h1{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filtres{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+.filtres select{
+    background: transparent;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+.filtres button{
+    width: 10rem;
+    height: 2.5rem;
+    font-size: 1.3rem;
+    background: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}
+.parfumes-cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: .5rem 0rem;
+}
+.parfumes-cards .card{
+    width: 22rem;
+    height:35rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    border-radius: 5px;
+}
+.parfumes-cards .card .top{
+    height: 60%;
+}
+.parfumes-cards .card .bottom{
+    padding: 0 1rem;
+}
+.parfumes-cards .notes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .5rem;
+}
+.parfumes-cards .notes h3{
+    font-size: .8rem;
+    font-weight: 100;
+    color: black;
+}
+.parfumes-cards .notes i{
+    color: red;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.parfumes-cards .title-price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+}
+.parfumes-cards .gouts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid black;
+    color: black;
+}
+.parfumes-cards .gouts div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.parfumes-cards .gouts h4{
+    font-weight: 100;
+    color: black;
+}
+.parfumes-cards .voirparfum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.parfumes-cards .voirparfum h2{
+    background-color: black;
+    color: white;
+    padding: .5rem 3rem;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+.parfumes-cards .voirparfum a{
+    background-color: black;
+    color: white;
+    padding: .5rem 3rem;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+.parfumes-cards .voirparfum h2:hover{
+    background-color: red;
+}
+.parfumes-cards .top h3{
+    color: white;
+    background-color: black;
+    padding: .5rem 1rem;
+    font-weight: 100;
+    width: 30%;
+}
+.nouveau{
+    padding: .5rem 2rem;
+}
+.nouveau h1{
+    font-size: 2.2rem;
+    margin: 3rem 0;
+}
+
+
+.voirplus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 38rem;
+    background-color: white;
+    border-radius: 5px;
+}
+.details .left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 5px 0 0 5px;
+}
+.details .left h2{
+    color: white;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+.details .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-basis: 50%;
+    padding: 2.5rem 2rem;
+}
+.details .title-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 1.5rem;
+}
+.details  h3{
+    font-size: 1.5rem;
+    
+}
+.details .price{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: .5rem;
+}
+.details .price i{
+    font-size: 2rem;
+    color: red;
+    cursor: pointer;
+}
+.details .gouts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    margin-top: 1.5rem;
+}
+.details .gouts div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.details .gouts h4{
+    font-weight: 100;
+}
+.details .acheter{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    align-items: center;
+}
+.details .acheter .cap{
+    border: 2px solid black;
+    padding: .5rem 3rem;
+    border-radius: 5px;
+}
+.details .acheter h4{
+    font-size: 1.2rem;
+    
+}
+.details .dcntg-price{
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+.details .acheter button{
+    padding: .5rem 8rem;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+}
+.details .acheter button:hover{
+    background-color: green;
+}
+.details select{
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+.details .add-panier{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    margin-top: 1rem;
+    border-radius: 5px;
+    color: white;
+}
+.details .counter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.details .add-panier button{
+    color: white;
+    font-size: 1.2rem;
+    background: transparent;
+    border: none;
+    height: 4.5rem;
+    padding: 0 2rem;
+    cursor: pointer;
+}
+.details p{
+    margin-top: 1rem;
+    text-align: justify;
+}
+.details p a{
+    font-weight: bolder;
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .popup form,.popup-container form{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2rem;
+  }
+  .popup form div,.popup-container form div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .popup form input,.popup-container form input{
+    width: 25rem;
+    height: 1.5rem;
+    padding: .5rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 1rem 0;
+  }
+  .popup form select,.popup-container form select{
+    border-radius: 5px;
+    width: 26rem;
+    height: 2.5rem;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+    padding: .5rem;
+  }
+  .popup form button,.popup-container form button{
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    width: 26rem;
+    padding: .5rem 2rem;
+    cursor: pointer;
+  }
+
+  .panier{
+    padding: 1rem 2rem;
+    border-top: 1px solid black;
+    margin-top: 2rem;
+  }
+  .panier-center{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  .panier-center .facture{
+    flex-basis: 30%;
+    border: 4px solid black;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .panier-center .top-facture div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .panier-center .facture h4{
+    margin-top: 1rem;
+  }
+  .panier-center .top-facture .total{
+    margin-top: 2rem;
+    border-top: 2px solid black;
+    padding-top: 1rem;
+  }
+  .panier-center .top-facture .confrim{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    margin-top: 2rem;
+    width: 100%;
+    padding: .5rem 0;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .panier-center .top-facture .confrim:hover{
+    background-color: green;
+  }
+  .panier-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+.panier-cards{
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+.panier-card div{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 2rem;
+    background-color: black;
+    padding: 2rem;
+    width: 35rem;
+    border-radius: 5px;
+}
+.panier-card div h2{
+    color: white;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+.panier-card form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.panier-card form button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    
+}
+.panier-card .confirm{
+    color: black;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+.panier-card .bottom-facture{
+    width: 100%;
+}
+
+
+
+  /* Popup container */
+.popup-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  /* Popup content */
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Close button */
+  #close-btn {
+    display: block;
+    margin-top: 20px;
+    background-color: #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  .title-price button{
+    background: transparent;
+    border: none;
+  }
+  .card .notes button{
+    background: transparent;
+    border: none;
+  }
+  .favoris-title{
+    text-align: center;
+    margin-top: 6rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  #popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  
+  #popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  #close-button {
+    margin-top: 10px;
+  }
+
+  
+.luxes .filtres .hide{
+    visibility: hidden;
+}
+
+
+.filtre-container{
+    background: white;
+    position: fixed;
+    top: 0%;
+    right: -150%;
+    height: 100vh;
+    width: 25rem;
+    padding: 3rem 2rem;
+    box-shadow: 1px 1px 20px 1px black;
+    transition: .5s ease-in-out;
+    overflow-y: scroll;
+}
+.show-filtre{
+    right: 0%;
+}
+.filtre-container .close-filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filtre-container h1{
+    font-size: 2rem;
+    font-weight: 100;
+    cursor: pointer;
+}
+.filtre-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 82vh;
+}
+.filtre-container form .form-top{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+  
+  .filtre-container form .accordion-item {
+    border-bottom: 1px solid #ccc;
+    margin: 1rem 0;
+  }
+  
+  .filtre-container form  .accordion-title {
+    background-color: transparent;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bolder;
+  }
+  
+  .filtre-container form .accordion-title:hover {
+    background-color: #ddd;
+  }
+  
+  .filtre-container form .accordion-content {
+    display: none;
+    padding: 1rem;
+  }
+  
+  .filtre-container form .accordion-item.active .accordion-content {
+    display: block;
+  }
+  
+  
+.filtre-container form button{
+    width: 100%;
+    padding: .5rem 0;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: .5rem;
+}
+
+.filtred-parfumes{
+    padding: .5rem 2rem;
+}
+.checkbox-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: .1rem;
+}
+.marque-checkboxes{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+.search-phone{
+    display: none;
+}
+
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    border-top: 2px solid black;
+    margin-top: 1rem;
+}
+.contact-section form{
+    margin-top: 1rem;
+    border: 1px solid black;
+    padding: 2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.contact-section form label{
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+.contact-section form select{
+    width: 25rem;
+    padding: .5rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.contact-section form input{
+    height: 2rem;
+    padding: .5rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.contact-section form .inpt-msg{
+    
+    padding: 0;
+    padding-top: .5rem;
+    padding-left: .5rem;
+    padding-bottom: 5rem;
+}
+.contact-section form button{
+    padding: .5rem 0;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+@media only screen and (max-width: 1400px){
+    .parfumes-cards{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .types img{
+        width: 500px;
+    }
+    .card{
+        width: 12rem;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .search-phone{
+        display: block;
+    }
+    .search-phone input{
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid white;
+        color: white;
+        padding: .5rem 0;
+        font-size: 1.2rem;
+    }
+   .filtred-parfumes{
+    margin-top: 4rem;
+   }
+    .pre-navbar{
+        padding: 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 95%;
+        box-shadow: 1px 1px 20px 1px black;
+        z-index: 150;
+        background-color: white;
+    }
+    .pre-navbar .search-bar{
+        display: none;
+    }
+    .pre-navbar .menu{
+        display: block;
+    }
+    .pre-navbar i{
+        font-size: 2.5rem;
+    }
+    .pre-navbar .icons a{
+        margin-right: 0;
+        margin-left: .7rem;
+    }
+    .pre-navbar .logo{
+        margin-right: 0;
+    }
+    .pre-navbar .logo img{
+        width: 100px;
+    }
+    .navbar ul{
+        flex-direction: column;
+        position: fixed;
+        top: 8%;
+        left: -120%;
+        justify-content: flex-start;
+        background-color: black;
+        padding: 1rem;
+        gap: 2rem;
+        height: 90vh;
+        gap: 5rem;
+        align-items: flex-start;
+        z-index: 100;
+        transition: .5s ease-in-out;
+    }
+    .navbar .show{
+        left: 0%;
+    }
+    .navbar ul li a,.navbar button{
+        font-size: 1.5rem;
+        color: white;
+        font-weight: 100;
+    }
+    .home{
+        margin-top: 2.5rem;
+    }
+    .benefits{
+        gap: .5rem;
+    }
+    .benefits img{
+        width: 90px;
+    }
+    .cats .types{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .cats .types img{
+        width: 350px;
+    }
+    .cats .title{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .footer-bottom{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+    footer .footer-top {
+        width: 100%;
+    }
+    footer .footer-top input::placeholder{
+        font-size: .7rem;
+    }
+    .footer-bottom .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-bottom h5{
+        padding: 0;
+    }
+    .footer-bottom h2{
+        font-size: 1rem;
+    }
+    .footer-bottom ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .footer-bottom .right{
+        margin-left: -5.5rem;
+        padding: 0;
+    }
+    #app .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 100%;
+    }
+    #app .right{
+        display: none;
+    }
+    .containe .card{
+        padding: .5rem 1.5rem;
+        width: 21rem;
+    }
+    .containe .inpt input{
+        width: 18rem;
+    }
+    .containe .confirm{
+        width: 22rem;
+    }
+    .parfumes-cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .luxes h1{
+        margin-top: 2rem;
+        text-align: center;
+ 
+    }
+    .voirplus{
+        margin-top: 8rem;
+    }
+    .details{
+        flex-direction: column;
+        height: 110%;
+    }
+    .details .left{
+        width: 100%;
+        height: 22rem;
+    }
+    .details .acheter button{
+        padding: .4rem;
+        font-size: .7rem;
+    }
+    .details .acheter select{
+        padding: .2rem;
+        font-size: .7rem;
+    }
+    .nouveau h1{
+        text-align: center;
+    }
+    .panier{
+        margin-top: 2rem;
+    }
+    .popup-container{
+        height: 100%;
+    }
+    .popup,.popup-container{
+        margin-top: 3rem;
+        height: 100%;
+
+    }
+    .popup form,.popup-container form{
+        flex-direction: column;
+        justify-content: center;
+        gap: .5rem
+    }
+    .popup-content form input,.popup-content form select,.popup-content form button{
+        width: 12rem;
+    }
+    .popup-content{
+        overflow: scroll;
+    }
+    .dash-nav a{
+        font-size: .8rem;
+    }
+    .panier-center{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .panier-cards{
+        flex-basis: 100%;
+        gap: .2rem;
+    }
+    .panier-card{
+        gap: .3rem;
+    }
+    .panier-card div{
+        width: 15rem;
+        padding: 1rem ;
+        
+    }
+    .panier-card div h2{
+        font-size: .7rem;
+    }
+    .filtre-container{
+        top: 10%;
+        height: 80vh;
+        width: 18rem;
+    }
+    .filtre-container form{
+        justify-content: center;
+        gap: 3rem;
+    }
+    .parfumes-cards img{
+        border-radius: 5px;
+    }
+    .voirplus .gouts{
+        gap: 1.5rem;
+    }
+    .add-panier .add-to-cart button{
+        font-size: .7rem;
+    }
+    .title-price .decantage-price{
+        font-size: .8rem;
+    }
+    .admin-login input{
+        width: 18rem;
+    }
+    .admin-login .confirm{
+        width: 19rem;
+    }
+    .ajouter-parfum h1{
+        text-align: center;
+    }
+    .admin-login h1{
+        text-align: center;
+    }
+}
